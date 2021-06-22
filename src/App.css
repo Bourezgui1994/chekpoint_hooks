@@ -1,38 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
 .App {
   text-align: center;
+  background-color: #2e384b;
+  color: #61dafb;
+  min-height: 120vh ;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3{
+  font-family: 'Pattaya', sans-serif;
+  color: #61dafb;
+  margin-left: 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+Form {
+  width: 100vh;
+  margin-left: 100px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.App .btn {
+  background-color:#61dafb ;
+  border: #61dafb;
+  margin-left: 20px;
+}
+
+.cardGroup {
+  
+  display: flex;
+  flex-wrap: wrap; 
+
+}
+
+.formGroup{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 350px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardMovie {
+  width: 19rem;
+  margin :100px 50px 10px 70px;
 }
