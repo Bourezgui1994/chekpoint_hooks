@@ -1,11 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
+
 
 .App {
   text-align: center;
-  background-color: #2e384b;
   color: #61dafb;
   min-height: 120vh ;
   overflow-x: hidden;
+  background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 30%, #262626 50% , #607d8b 100%);
+  filter: hue-rotate(120deg);
+  animation: animate 10s linear infinite;
+}
+
+
+@keyframes animate 
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+
 }
 
 h3{
@@ -32,6 +51,9 @@ Form {
   
   display: flex;
   flex-wrap: wrap; 
+  justify-content: space-between;
+  width: 170vh;
+  margin: 100px 30px 70px 100px;
 
 }
 
@@ -39,9 +61,35 @@ Form {
   display: flex;
   flex-direction: column;
   width: 350px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.addMovie{
+  background-color: #61dafb;
+  
 }
 
 .cardMovie {
   width: 19rem;
-  margin :100px 50px 10px 70px;
+  font-size: 15px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 70px;
+  position: absolute;
+  
+}
+
+.titleMovie {
+  font-family: 'Pattaya', sans-serif;
+
+}
+
+.descriptionMovie{
+  margin-top: 22px;
+}
+
+.btnMovie{
+  margin-top: 25px;
+  width: 100px;
 }

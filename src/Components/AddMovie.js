@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button,Modal} from 'react-bootstrap';
+import {Button,Modal,Form,Col} from 'react-bootstrap';
 
 
 const AddMovie = ({Add}) => {
@@ -16,6 +16,8 @@ const AddMovie = ({Add}) => {
       rating:"",
       image:"",
       description:"",
+      duration:"",
+      type:"",
   });
 
   const{title,rating,image,description}=newMovie
@@ -31,36 +33,39 @@ const AddMovie = ({Add}) => {
       rating:"",
       image:"",
       description:"",
+      duration:"",
+      type:"",
   })
    handleClose()
   }
 
   return (
-    <div>
+    <div >
       <Button variant="primary" onClick={handleShow} className="addButton">
         Add movies
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} >
         <Modal.Header closeButton>
           <Modal.Title>Add new movie</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-            <form className="formGroup">
+        <Modal.Body className="addMovie">
+            <Form className="formGroup">
+            <Form.Control placeholder="Title" name="title" onChange={(e)=> change(e)} />
+            <Form.Control placeholder="Description" name="description" onChange={(e)=> change(e)} />
+            <Form.Control placeholder="Rating" name="rating" onChange={(e)=> change(e)} />
+            <Form.Control placeholder="Image" name="image" onChange={(e)=> change(e)}  />
 
-            <label>title</label>
-            <input type="text" name="title" onChange={(e)=> change(e)}></input>
+            <Form.Row>
+                  <Col>
+                    <Form.Control placeholder="Type" name="type" onChange={(e)=> change(e)} />
+                  </Col>
+                  <Col>
+                    <Form.Control placeholder="Duration" name="duration" onChange={(e)=> change(e)}/>
+                  </Col>
+            </Form.Row>
 
-            <label>Description</label>
-            <input type="text" name="description" onChange={(e)=> change(e)} ></input>
-
-            <label>Rating</label>
-            <input type="text"  name="rating" onChange={(e)=> change(e)} ></input>
-
-            <label>Image</label>
-            <input type="text"  name="image" onChange={(e)=> change(e)} ></input>
-
-            </form>
+            </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
